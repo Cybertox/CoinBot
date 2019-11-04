@@ -18,7 +18,7 @@ class Bot:
         self._init_handlers()
     
     def run(self):
-        self._updater.delete_webhook()
+        self._updater.bot.delete_webhook()
         self._updater.start_webhook(listen='0.0.0.0', port=PORT,
                                     url_path=self._token)
         self._updater.bot.set_webhook(URL + self._token)
