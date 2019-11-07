@@ -10,7 +10,7 @@ from utils import format_thousands
 class Bot:
     def __init__(self, token, debug=False):
         self._token = token
-        self._updater = Updater(token)
+        self._updater = Updater(token, use_context=True)
         self._debug = debug
 
         self._session = requests.Session()
